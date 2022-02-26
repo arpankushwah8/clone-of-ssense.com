@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      textarea {
+        text-align: center;
+        margin-left: 150px;
+        margin-top: 50px;
+        /* resize: none; */
+      }
+      #main{
+        width: 70%;
+        margin-left: 150px;
+      }
+      input{
+        padding: 5px 90px;
+        margin-top: 30px;
+        /* margin-left: 20px; */
+      }
+      
+    </style>
+    <title>Checkout</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">SSCENE</h1>
+    <div id="main">
+
+      
+      
+      <p>Checkout</p>
+      <p>Shipping Address</p>
+      <hr>
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="text" placeholder="Street Address">
+      <input type="text" placeholder="Company">
+      <input type="text" placeholder="City">
+      <input type="text" placeholder="Zip or Postal Pincode">
+      <input type="text" placeholder=" Country/Region">
+      <input type="text" placeholder="State/private">
+      <input type="text" placeholder="Phone">
+
+
+      </div>
+      <div id="rightside"></div>
+
+    </div>
+    <textarea name="address" id="address" cols="40" rows="2"></textarea>
+    <button onclick="addAddress()">Proceed to Payment</button>
+    <script>
+      function addAddress() {
+        let address = document.getElementById("address").value;
+        console.log(address);
+        if (address) {
+          // if address exists; redirect to payment page;
+          window.location.href = "payment.html";
+        }
+      }
+    </script>
+  </body>
+</html>
